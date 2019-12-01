@@ -131,17 +131,18 @@ table {
 }
 html {
   font-size: 62.5%;
+  font-family: 'Share Tech Mono', monospace;
 }
 html,
 body {
-  background-color: white;
+  background-color: #4c596d;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Share Tech Mono', monospace;
 }
 h1 {
   font-size: 3rem;
@@ -158,4 +159,125 @@ h4 {
 p {
   line-height: 1.5;
   font-size: 1rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container .calculator {
+  padding: 20px 5px 5px 5px;
+  background: #222831;
+  display: grid;
+  border: solid black 5px;
+  border-radius: 5px;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: 'screen screen screen screen' 'screen screen screen screen' 'clear posneg percent divide' 'seven eight nine multiply' 'four five six minus' 'one two three plus' 'zero zero decimal equals';
+}
+.container .calculator .item {
+  font-size: 4rem;
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  background: #29a19c;
+  color: #a3f7bf;
+}
+@media (max-width: 500px) {
+  .container .calculator .item {
+    font-size: 3rem;
+  }
+}
+.container .calculator .screen {
+  grid-area: screen;
+  background: black;
+  color: #8ff804;
+  justify-content: end;
+  align-items: end;
+  border-radius: 0;
+  font-size: 8rem;
+}
+@media (max-width: 500px) {
+  .container .calculator .screen {
+    font-size: 7rem;
+  }
+}
+.container .calculator .clear {
+  grid-area: clear;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .pos_neg {
+  grid-area: posneg;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .percent {
+  grid-area: percent;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .divide {
+  grid-area: divide;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .multiply {
+  grid-area: multiply;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .minus {
+  grid-area: minus;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .plus {
+  grid-area: plus;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .decimal {
+  grid-area: decimal;
+}
+.container .calculator .equals {
+  grid-area: equals;
+  background: #a3f7bf;
+  color: #222831;
+}
+.container .calculator .one {
+  grid-area: one;
+}
+.container .calculator .two {
+  grid-area: two;
+}
+.container .calculator .three {
+  grid-area: three;
+}
+.container .calculator .four {
+  grid-area: four;
+}
+.container .calculator .five {
+  grid-area: five;
+}
+.container .calculator .six {
+  grid-area: six;
+}
+.container .calculator .seven {
+  grid-area: seven;
+}
+.container .calculator .eight {
+  grid-area: eight;
+}
+.container .calculator .nine {
+  grid-area: nine;
+}
+.container .calculator .zero {
+  grid-area: zero;
 }
