@@ -134,7 +134,7 @@ html {
 }
 html,
 body {
-  background-color: white;
+  background-color: #BADA22;
 }
 h1,
 h2,
@@ -158,4 +158,79 @@ h4 {
 p {
   line-height: 1.5;
   font-size: 1rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container .calculator {
+  background: white;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: 'screen screen screen screen' 'screen screen screen screen' 'clear posneg percent divide' 'seven eight nine multiply' 'four five six minus' 'one two three plus' 'zero zero decimal equals';
+}
+.container .calculator .item {
+  font-size: 1.5rem;
+}
+.container .calculator .screen {
+  grid-area: screen;
+}
+.container .calculator .clear {
+  grid-area: clear;
+}
+.container .calculator .pos_neg {
+  grid-area: posneg;
+}
+.container .calculator .percent {
+  grid-area: percent;
+}
+.container .calculator .divide {
+  grid-area: divide;
+}
+.container .calculator .multiply {
+  grid-area: multiply;
+}
+.container .calculator .minus {
+  grid-area: minus;
+}
+.container .calculator .plus {
+  grid-area: plus;
+}
+.container .calculator .decimal {
+  grid-area: decimal;
+}
+.container .calculator .equals {
+  grid-area: equals;
+}
+.container .calculator .one {
+  grid-area: one;
+}
+.container .calculator .two {
+  grid-area: two;
+}
+.container .calculator .three {
+  grid-area: three;
+}
+.container .calculator .four {
+  grid-area: four;
+}
+.container .calculator .five {
+  grid-area: five;
+}
+.container .calculator .six {
+  grid-area: six;
+}
+.container .calculator .seven {
+  grid-area: seven;
+}
+.container .calculator .eight {
+  grid-area: eight;
+}
+.container .calculator .nine {
+  grid-area: nine;
+}
+.container .calculator .zero {
+  grid-area: zero;
 }
