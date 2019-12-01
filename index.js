@@ -9,7 +9,7 @@ let numbers = document.querySelectorAll('.number');
 let screen = document.querySelector('.screen');
 
 numbers.forEach(el => el.addEventListener('click', (event) => {
-    if( screen.textContent === '0' || calculator.num1 !== null) {
+    if( screen.textContent === '0') {
         screen.textContent = event.target.textContent
     } else {
         screen.textContent += event.target.textContent;
@@ -40,6 +40,7 @@ function calculate(obj) {
     : obj.operator === '-' ? screen.textContent = obj.num1 - obj.num2
     : obj.operator === '*' ? screen.textContent = obj.num1 * obj.num2
     : obj.operator === '/' ? screen.textContent = obj.num1 / obj.num2
+    : obj.operator === '%' ? screen.textContent = obj.num1 % obj.num2
     : null;
 };
 
@@ -49,7 +50,7 @@ let operator = document.querySelectorAll('.operator');
 operator.forEach(el => el.addEventListener('click', (event) => {
     calculator.num1 = screen.textContent;
     calculator.operator = event.target.textContent;
-    screen.textContent = screen.textContent;
+    screen.textContent = '';
     
     console.log(calculator)
 }));

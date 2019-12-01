@@ -1,11 +1,13 @@
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 
     .calculator {
-        margin: 25px;
-        padding: 5px;
-        background: slategray;
+        padding: 20px 5px 5px 5px;
+        background: @dark;
         display: grid;
         border: solid black 5px;
         border-radius: 5px;
@@ -22,51 +24,65 @@
         'zero zero decimal equals';
 
         .item {
-            font-size: 2rem;
+            font-size: 4rem;
             padding: 10px;
             display: grid;
             justify-content: center;
             align-items: center;
             border: 5px solid rgba(0, 0, 0, 0.15);
             border-radius: 3px;
-            background: purple;
-            color: yellow;
+            background: @darkBlue;
+            color: @lightBlue;
+            @media @mobile {
+                font-size: 3rem;
+            }
         }
         .screen {
             grid-area: screen;
             background: black;
-            color: rgb(141, 235, 0);
+            color: rgb(143, 248, 4);
             justify-content: end;
             align-items: end;
             border-radius: 0;
-            font-size: 3rem;
+            font-size: 8rem;
+            @media @mobile {
+                font-size: 7rem;
+            }
         }
         .clear {
             grid-area: clear;
+            .opButton();
         }
         .pos_neg {
             grid-area: posneg;
+            .opButton();
         }
         .percent {
             grid-area: percent;
+            .opButton();
         }
         .divide {
             grid-area: divide;
+            .opButton();
         }
         .multiply {
             grid-area: multiply;
+            .opButton();
         }
         .minus {
             grid-area: minus;
+            .opButton();
         }
         .plus {
             grid-area: plus;
+            .opButton();
         }
         .decimal {
             grid-area: decimal;
         }
         .equals {
             grid-area: equals;
+            .opButton();
         }
         .one {
             grid-area: one;
