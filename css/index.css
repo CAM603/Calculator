@@ -178,6 +178,12 @@ p {
   grid-template-rows: repeat(7, 1fr);
   grid-template-areas: 'screen screen screen screen' 'screen screen screen screen' 'clear posneg percent divide' 'seven eight nine multiply' 'four five six minus' 'one two three plus' 'zero zero decimal equals';
 }
+@media (max-width: 500px) {
+  .container .calculator {
+    height: 100%;
+    width: 100%;
+  }
+}
 .container .calculator .item {
   font-size: 4rem;
   padding: 10px;
