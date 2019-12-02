@@ -167,6 +167,11 @@ p {
   width: 100vw;
   height: 100vh;
 }
+@media (max-width: 500px) {
+  .container {
+    background: black;
+  }
+}
 .container .calculator {
   padding: 20px 5px 5px 5px;
   background: #222831;
@@ -195,11 +200,6 @@ p {
   background: #29a19c;
   color: #a3f7bf;
 }
-@media (max-width: 500px) {
-  .container .calculator .item {
-    font-size: 3rem;
-  }
-}
 .container .calculator .screen {
   grid-area: screen;
   background: black;
@@ -208,11 +208,6 @@ p {
   align-items: end;
   border-radius: 0;
   font-size: 8rem;
-}
-@media (max-width: 500px) {
-  .container .calculator .screen {
-    font-size: 7rem;
-  }
 }
 .container .calculator .clear {
   grid-area: clear;
